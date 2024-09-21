@@ -38,6 +38,8 @@
 % Provides `/Xcline'.
 \RequirePackage{titlesec}
 \RequirePackage{xltabular}
+% Provides cell color
+\RequirePackage[HTML, table]{xcolor}
 
 %%
 %% Pre user settings
