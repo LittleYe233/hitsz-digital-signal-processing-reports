@@ -1,0 +1,193 @@
+\documentclass{dspreport}
+
+%%
+%% User settings
+%%
+
+\classno{\blank{  }}
+\stuno{\blank{  }}
+\groupno{\blank{  }}
+\stuname{\blank{  }}
+\expdate{\lxgw\expdatefmt\today}
+\expidx{二}
+\expname{模数转换器}
+
+%%
+%% Document body
+%%
+
+\begin{document}
+% First page
+% Some titles and personal information are defined in ``\maketitle''.
+\maketitle
+
+\section{实验记录}
+\textbf{2.5.2. PCM 编码和量化}
+\begin{table}[H]
+    \centering
+    \caption{DC 电压输入与对应的 PCM 代码字}
+    \begin{tabularx}{.8\textwidth}{|Y|Y|Y|Y|} \hline
+        % Here the texts should be vertically centered in a high cell, but
+        % I failed to do so using tabularx, so I set the cell height to
+        % normal.
+        % See: xcolor.pdf
+        \cellcolor[HTML]{DDD9C4} DC 电压 (V) & \cellcolor[HTML]{DDD9C4} 8 位 PCM 代码字 & \cellcolor[HTML]{DDD9C4} DC 电压 (V) & \cellcolor[HTML]{DDD9C4} 8 位 PCM 代码字 \\\hline
+        -0.5                               & \blank{  }                           & 0.5                                & \blank{  }                           \\\hline
+        -1                                 & \blank{  }                           & 1                                  & \blank{  }                           \\\hline
+        -1.5                               & \blank{  }                           & 1.5                                & \blank{  }                           \\\hline
+        -2                                 & \blank{  }                           & 2                                  & \blank{  }                           \\\hline
+        -2.5                               & \blank{  }                           & 2.5                                & \blank{  }                           \\\hline
+    \end{tabularx}
+\end{table}
+
+绘制 DC 电压与量化电平 (用十进制表示) 的关系曲线.
+
+\begin{block}
+
+\end{block}
+
+\begin{figure}[H]
+    \centering
+\end{figure}
+
+\begin{block}
+
+\end{block}
+
+\textbf{问题 1} 采样频率是多少?
+\begin{block}
+
+\end{block}
+
+\textbf{问题 2} 量化电平有多少个?
+\begin{block}
+
+\end{block}
+
+\textbf{问题 3} 量化电平间距相等 (线性) 吗?
+\begin{block}
+
+\end{block}
+
+\textbf{问题 4} 根据实验数据计算, 最小量化电平间距是多少? 与理论值相比怎样?
+\begin{block}
+
+\end{block}
+
+\textbf{2.5.3. PCM 编码与解码}
+
+\textbf{记录 1:} 逐渐调低可调谐低通滤波器的工作频率, 观测滤波器的输出波形, 当旋转到某个位置, 高次谐波被滤除, 信号幅度最大, 此时为\underline{最佳的滤波器频率}, \textbf{分别记录 DAC-0 输出的时域波形和最佳频率处可调谐低通滤波器输出的时域波形 (可截图), 并记录此时低通滤波器的 3dB 通带, 阻带截止频率.}
+\begin{block}
+
+\end{block}
+
+\begin{figure}[H]
+    \centering
+\end{figure}
+
+\begin{block}
+
+\end{block}
+
+3dB 通带截止频率为: \underline{\blank{  }}, 3dB 阻带截止频率为: \underline{\blank{  }}.
+
+\textbf{2.5.4. DTMF 信号产生与接收}
+
+\textbf{记录 2:} 任选 \textbf{2 个 DTMF 编码信号} (为便于后续的DTMF信号检测, 建议优先选择较低频率的 DTMF 编码信号, 如 ``1'', ``4'', ``7'', ``*'' 等), 分别用虚拟仪器平台的示波器和频谱分析仪观察并记录 DTMF 信号 (即加法器的输出端) 的\textbf{时域, 频域波形, 可截图.}
+
+\textbf{第一个 DTMF 信号}
+
+时域波形
+\begin{block}
+
+\end{block}
+
+\begin{figure}[H]
+    \centering
+\end{figure}
+
+\begin{block}
+
+\end{block}
+
+频域波形
+\begin{block}
+
+\end{block}
+
+\begin{figure}[H]
+    \centering
+\end{figure}
+
+\begin{block}
+
+\end{block}
+
+\textbf{第二个 DTMF 信号}
+
+时域波形
+\begin{block}
+
+\end{block}
+
+\begin{figure}[H]
+    \centering
+\end{figure}
+
+\begin{block}
+
+\end{block}
+
+频域波形
+\begin{block}
+
+\end{block}
+
+\begin{figure}[H]
+    \centering
+\end{figure}
+
+\begin{block}
+
+\end{block}
+
+\textbf{记录 3:} 针对所选的 \textbf{2 个 DTMF 编码信号}, 用示波器观测 \textbf{PCM 解码器输出端波形}, 记录多个周期的时域波形与频域波形 \textbf{(可截图), 并说明前几次谐波谱峰分别对应哪些信号的谐波? 计算出这些谱峰的精确位置.} (注意: 使用频谱分析仪观测 DTMF 信号频谱时, 频谱分析范围应包含 DTMF 最高频率 5 次以上谐波).
+\begin{block}
+
+\end{block}
+
+\begin{figure}[H]
+    \centering
+\end{figure}
+
+\begin{block}
+
+\end{block}
+
+\textbf{记录 4:} 用示波器观察并记录低通滤波器输出的时域波形, 用频谱分析仪观测并记录频域波形, 记录\textbf{时域及频域波形 (可截图), 并与记录 2 中未经过 PCM 编解码的原始 DTMF 信号对比, 说明 DTMF 信号经过 PCM 编码器, PCM 解码器, 低通滤波器后的变化.}
+
+\textbf{记录 5: DTMF 信号能被稳定接收时, 测量该信号两个频率分量的幅值, 并与记录 4 中对应频率分量的幅值对比, 是否相同?}
+
+选取的记录 2 中 DTMF 信号为编码\underline{\blank{  }}
+
+两个频率分量的幅度分别为\underline{\blank{  }}, \underline{\blank{  }}.
+
+\textbf{拍照保存}此时 DTMF 接收模块的亮灯情况, 并说明与图 2-3 解码表是否对应.
+\begin{block}
+
+\end{block}
+
+\begin{figure}[H]
+    \centering
+\end{figure}
+
+\begin{block}
+
+\end{block}
+
+\section{实验体会与建议}
+\begin{block}
+
+\end{block}
+
+\end{document}
