@@ -1,0 +1,209 @@
+\documentclass{dspreport}
+
+%%
+%% User settings
+%%
+
+\classno{\blank{  }}
+\stuno{\blank{  }}
+\groupno{\blank{  }}
+\stuname{\blank{  }}
+\expdate{\lxgw\expdatefmt\today}
+\expidx{一}
+\expname{采样与混叠}
+
+%%
+%% Document body
+%%
+
+\begin{document}
+% First page
+% Some titles and personal information are defined in ``\maketitle''.
+\maketitle
+
+\section{实验记录与问题思考}
+\textbf{1.5.2 测量可调谐低通滤波器的频谱特性}
+
+\textbf{记录 1:} 低通滤波器截止频率 $f_c$ 分别设置为最低和最高, 采集两种状态下滤波器的幅频响应数据.
+
+\textbf{注意:} 改变输入信号频率, 测试经过低通滤波器的信号和幅值, 用 MATLAB 画出滤波器的频率响应曲线, 并在图中标出通带截止频率和阻带截止频率.
+
+\textbf{作图:} $f_c$ 设置为最低的低通滤波器频率响应曲线.
+
+\begin{figure}[H]
+    \centering
+\end{figure}
+
+$f_c$ 设置为最低时, 通带截止频率为: \underline{\blank{  }}, 阻带截止频率为: \underline{\blank{  }}.
+
+\textbf{作图:} $f_c$ 设置为最高的低通滤波器频率响应曲线.
+
+\begin{block}
+
+\end{block}
+
+\begin{figure}[H]
+    \centering
+\end{figure}
+
+\begin{block}
+
+\end{block}
+
+$f_c$ 设置为最高时, 通带截止频率为: \underline{\blank{  }}, 阻带截止频率为: \underline{\blank{  }}.
+
+\textbf{1.5.3 基于采样保持器的信号采样和信号恢复}
+
+\textbf{记录 2:} 记录采样保持器输出信号的\textbf{示波器的}{\color{red} 时域波形, 数据}和\textbf{频谱分析仪的}{\color{red} 频域数据}, 用 MATLAB 画出:
+1) 采样保持器输出信号的时域波形曲线 (由导出的数据作图), 2) 由导出的时域数据做傅里叶变换得到的频域波形, 及利用直接导出的频谱分析仪数据作图, 两张频域波形画在\textbf{同一张图}中.
+
+\begin{block}
+
+\end{block}
+
+\begin{figure}[H]
+    \centering
+\end{figure}
+
+\begin{block}
+
+\end{block}
+
+\textbf{记录 3:} 可调谐低通滤波器的截止频率由最大逐渐调至最小, 近似完全恢复原始信号 (即周期延拓谱近似完全滤除) 的情况下, 测试此时可调谐低通滤波器的幅频响应, \textbf{说明}此时低通滤波器的通带截止频率 (\textbf{不需要作图}).
+
+低通滤波器的通带截止频率为\underline{\blank{  }}.
+
+\textbf{1.5.4 基于乘法器的信号采样、信号恢复以及频谱混叠}
+
+\textbf{记录 4:} 记录被采样信号与采样信号的示波器上的时域数据和频谱分析仪上的频谱数据, 用 MATLAB 画出被采样信号与采样信号的时域波形及频域波形 (共四张图).
+
+\begin{block}
+
+\end{block}
+
+\begin{figure}[H]
+    \centering
+\end{figure}
+
+\begin{block}
+
+\end{block}
+
+\textbf{问题 1:} 谱线组和谱线组之间的距离 (红线部分) 与什么参数有关? 请解释说明.
+
+\begin{block}
+
+\end{block}
+
+\textbf{记录 5:} 找到影响谱线组之间距离的参数, 并将其改为原值的两倍, 记录两种参数下, 采样信号的时域波形图和频域波形图 (\textbf{可截图}).
+
+影响谱线组之间距离的参数为: \underline{\blank{  }}.
+
+\begin{block}
+
+\end{block}
+
+\begin{figure}[H]
+    \centering
+\end{figure}
+
+\begin{block}
+
+\end{block}
+
+\textbf{问题 2:} 每一谱线组内为什么有两根谱线, 两根谱线之间的距离和什么参数有关? 请解释说明.
+
+\begin{block}
+
+\end{block}
+
+\textbf{记录 6:} 找到影响组内谱线间隔的参数, 并将其改为原值的两倍, 记录两种参数下, 采样信号的时域波形图和频域波形图 (\textbf{可截图}).
+
+影响组内谱线间隔的参数为: \underline{\blank{  }}.
+
+\begin{block}
+
+\end{block}
+
+\begin{figure}[H]
+    \centering
+\end{figure}
+
+\begin{block}
+
+\end{block}
+
+\textbf{分析 1:} 其它参数保持不变, 矩形脉冲占空比设置为 25\%, 观察频谱波形是否受到采样信号脉冲占空比的影响, 用采样信号的频谱解析式进行分析.
+
+\begin{block}
+
+\end{block}
+
+\textbf{记录 7:} 记录两种占空比下, {\color{red} 采样信号}的时域波形图和频域波形图 (\textbf{可截图}).
+
+\begin{block}
+
+\end{block}
+
+\begin{figure}[H]
+    \centering
+\end{figure}
+
+\begin{block}
+
+\end{block}
+
+\textbf{分析 2:} 对采样信号进行滤波, 用频谱分析与进行观测. 选择合适的 Frequency Span, 将低通滤波器截止频率由最大值逐渐降低, 观测在滤波器截止频率下降过程中, 在频域窗口内波形发生什么变化.
+
+\begin{block}
+
+\end{block}
+
+\textbf{问题 3:} 当滤波器频率调谐旋钮旋转至最低截止频率位置时, 按照信号恢复理论, 应该能够恢复原有信号, 用示波器观察应该看到原始信号波形, 你看到原始信号波形了么?
+
+\begin{block}
+
+\end{block}
+
+\textbf{问题 4:} 如果不存在原始信号的频谱, 分析其原因.
+
+\begin{block}
+
+\end{block}
+
+\textbf{分析 3:} 观察各个成组谱线对应的频率, 确定乘法器输出波形是偶对称信号波形还是奇对称信号波形.
+
+\begin{block}
+
+\end{block}
+
+\textbf{问题 5:} 如何使得输出的采样信号中包含原始信号频率成份?
+
+\begin{block}
+
+\end{block}
+
+\textbf{分析 4:} 如果将采样率设置为 200Hz, 刚好等于临界奈奎斯特采样频率, 将滤波器截止频率设置为最低, 观测时域波形和频谱波形的变化过程, 判断是否可以完全恢复原始信号, 对观察的现象进行解释.
+
+\begin{block}
+
+\end{block}
+
+\textbf{分析 5:} 如果采样率设置为 150Hz, 将滤波器截止频率由最大逐渐降低, 观测时域波形和频谱波形的变化过程.
+
+\begin{block}
+
+\end{block}
+
+\textbf{(选做) 问题 6: 将低通滤波器的截止频率由最大逐渐降低, 当频谱分析仪上剩 7 根谱线时,} 计算并解释这 7 根谱线的产生分别是延拓频谱里哪些频率成份产生的?
+
+\begin{block}
+
+\end{block}
+
+\section{实验体会与建议}
+\begin{block}
+
+\end{block}
+
+\end{document}

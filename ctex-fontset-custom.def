@@ -1,0 +1,41 @@
+\ProvidesExplFile{ctex-fontset-custom.def}
+{\ExplFileDate}{1.1.0}{\ExplFileDescription}
+\setCJKmainfont { NotoSerifCJKsc-Regular.otf }
+[
+    Path       = fonts/,
+    BoldFont   = NotoSerifCJKsc-Bold.otf,
+    ItalicFont = FZKTK.TTF
+]
+\setCJKfamilyfont { zhsong } { NotoSerifCJKsc-Regular }
+[
+    Path       = fonts/,
+    Extension  = .otf,
+    BoldFont   = NotoSerifCJKsc-Bold
+]
+\setCJKfamilyfont { zhhei  } { NotoSansCJKsc-Regular  }
+[
+    Path       = fonts/,
+    Extension  = .otf,
+    BoldFont   = NotoSansCJKsc-Bold
+]
+\setCJKfamilyfont { zhkai  } { FZKTK.ttf }
+[ Path = fonts/ ]
+\setCJKfamilyfont { lxgw   } { LXGWWenKai-Regular     }
+[
+    Path       = fonts/,
+    Extension  = .ttf,
+    BoldFont   = LXGWWenKai-Bold,
+    ItalicFont = FZKTK.TTF
+]
+\newfontfamily \lxgwNonZh { LXGWWenKai-Regular }
+[
+    Path       = fonts/,
+    Extension  = .ttf,
+    BoldFont   = LXGWWenKai-Bold,
+    ItalicFont = FZKTK.TTF,
+    NFSSFamily = lxgwNonZh
+]
+\NewDocumentCommand \songti   { } { \CJKfamily { zhsong  } \fontfamily{lmr}\selectfont }
+\NewDocumentCommand \kaishu   { } { \CJKfamily { zhkai   } }
+\NewDocumentCommand \heiti    { } { \CJKfamily { zhhei   } }
+\NewDocumentCommand \lxgw     { } { \CJKfamily { lxgw    } \fontfamily{lxgwNonZh}\selectfont }
