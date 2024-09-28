@@ -1,0 +1,276 @@
+\documentclass{dspreport}
+
+%%
+%% User settings
+%%
+
+\classno{\blank{  }}
+\stuno{\blank{  }}
+\groupno{\blank{  }}
+\stuname{\blank{  }}
+\expdate{\lxgw\expdatefmt\today}
+\expidx{四}
+\expname{无限脉冲响应滤波器}
+
+%%
+%% Document body
+%%
+
+\begin{document}
+% First page
+% Some titles and personal information are defined in ``\maketitle''.
+\maketitle
+
+\section{实验准备}
+\textbf{问题 1}\quad 图 4-1 中, 以 $x(n)$ 为系统输入, $x_0(n)$ 为系统输出, 写出系统的差分方程与系统函数 $H(z)$.
+
+\begin{block}
+
+\end{block}
+
+\textbf{问题 2}\quad 图 4-2 中, 以 $x(n)$ 为系统输入, $x_0(n)$ 为系统输出, 写出系统的差分方程与系统函数 $H(z)$.
+
+\begin{block}
+
+\end{block}
+
+\textbf{问题 3}\quad 利用图形化的零极点方法来估计下列三种情形中的幅频响应 (0 到 $2\pi$), 判断滤波器类型 (低通, 高通, 带通).
+\begin{enumerate}[(1)]
+    \item $b_0=0.02, b_1=0.04, b_2=0.02; a_0=1, a_1=-1.562, a_2=0.64$;
+    \item $b_0=0.504, b_1=-1.008, b_2=0.504; a_0=1, a_1=-0.748, a_2=0.27$;
+    \item $b_0=0.06, b_1=0, b_2=-0.06; a_0=1, a_1=-1.29, a_2=0.88$.
+\end{enumerate}
+
+\section{实验记录与问题思考}
+\noindent\textbf{4.5.2 无前馈的 IIR: 二阶滤波器}
+
+(3) 测试系统幅频响应.
+
+测试系统的谐振频率为\underline{\blank{  }}, 谐振频率下的幅值放大倍数为\underline{\blank{  }}, 通频带带宽 (3dB 带宽) 为\underline{\blank{  }}.
+
+此时加法器的增益作为系统差分方程的系数, 利用 MATLAB 仿真, 在同一张图 300Hz-400Hz 频率范围内画出该滤波器\textbf{实际测试}和\textbf{仿真计算}的幅频响应特性曲线.
+
+\begin{block}
+
+\end{block}
+
+\begin{figure}[H]
+
+\end{figure}
+
+\begin{block}
+
+\end{block}
+
+仿真的谐振频率为\underline{\blank{  }}, 在谐振频率下的幅值放大倍数为\underline{\blank{  }}, 通频带带宽 (3dB 带宽) 为\underline{\blank{  }}.
+
+并将仿真结果和实际测试值进行对比.
+
+\textbf{问题 4} 谐振器只需要一阶极点即可实现, 为什么我们实验系统要使用二阶系统涉及谐振器? 在我们实验板上可以使用一阶系统实现任意设定频率 (在实验板给定的系数范围内) 的谐振器吗? 试说明原因.
+
+\begin{block}
+
+\end{block}
+
+(4) 将参数重新设定为步骤 (1) 的参数. 增大 $|a_1|$ 的值至 1.7, 观察 $|a_1|$ 值的增大对谐振频率和放大倍数的影响, 并以此来估计极点位置产生了怎样的变化 (从极点与单位圆, 实轴, 虚轴的举例分析).
+
+\begin{block}
+
+\end{block}
+
+(5) 将参数重新设定为步骤 (1) 的参数. 增大 $|a_2|$ 的值至 0.95, 观察 $|a_2|$ 值的增大对谐振频率和放大倍数的影响, 并以此来估计极点位置产生了怎样的变化 (从极点与单位圆, 实轴, 虚轴的举例分析).
+
+\begin{block}
+
+\end{block}
+
+\textbf{问题 5} 比较分别改变 $a_1$ 和 $a_2$ 对极点位置, 谐振频率以及带宽的影响. 在 $a_1, a_2$ 中你将选择调整哪一个参数来调整系统的谐振频率? 解释一下原因.
+
+\begin{block}
+
+\end{block}
+
+(6) 出现振荡时的 $a_2$ 值为\underline{\blank{  }}.
+
+\textbf{去掉输入信号}, 观察输出结果, 并\textbf{截图保存}.
+
+输出结果是正弦曲线吗? 曲线的频率为\underline{\blank{  }}.
+
+\begin{block}
+
+\end{block}
+
+根据当前加法器的增益计算并画出极点的位置, 特别注意他它们是在单位圆的内部还是外部?
+
+\begin{block}
+
+\end{block}
+
+(7) {\color{red} (选做)} 逐渐减小 $a_2$ (即增加 $|a_2|$), 观察时域及频域波形的变化, 并描述改变 $a_2$ 的值对系统响应结果的影响.
+
+\begin{block}
+
+\end{block}
+
+(8) {\color{red} (选做)} 将参数重新设置为步骤 (7) 的参数, 逐渐增加 $|a_1|$, 观察时域及频域波形的变化. 至时域峰值即将消失时, 分别对\textbf{峰值消失前后}的波形进行\textbf{截图}.
+
+\begin{block}
+
+\end{block}
+
+\begin{figure}[H]
+
+\end{figure}
+
+\begin{block}
+
+\end{block}
+
+\noindent 峰值消失时 $a_1$ 的值为\underline{\blank{  }}.
+
+\noindent 画出极点图, \textbf{并解释你的观测结果.}
+
+\begin{block}
+
+\end{block}
+
+\begin{figure}[H]
+
+\end{figure}
+
+\begin{block}
+
+\end{block}
+
+\noindent\textbf{4.5.3 带前馈的 IIR: 二阶滤波器}
+
+\textbf{问题 6} 图 4-5 中以 $x(n)$ 为系统的输入, $y(n)$ 为系统输出, 写出滤波器的系统函数 $H(z)$, 并与问题 2 中图 4-2 的系统函数对比.
+
+\begin{block}
+
+\end{block}
+
+(1) 验证实验预习中问题 3 中的 (1):
+
+将函数发生器的频率从 300Hz 逐渐增大至 8000Hz, 进行如下测试:
+\begin{enumerate}[label=\textcircled{\arabic*}]
+    \item 函数发生器频率为 300Hz 时, 可调谐低通滤波器输出信号的幅度值为\underline{\blank{  }};
+    \item 可调谐低通滤波器输出信号幅值为 0.5V 时, 函数发生器的频率值为\underline{\blank{  }};
+    \item 可调谐低通滤波器输出信号基本消失时, 函数发生器的频率值为\underline{\blank{  }};
+    \item 利用目前设置的加法器增益作为系统差分方程的系数, 在 MATLAB 上对滤波器幅频响应特性及零极点图进行仿真;
+    \item 判断滤波器的类型为\underline{\blank{  }}.
+\end{enumerate}
+\begin{block}
+
+\end{block}
+
+\begin{figure}[H]
+
+\end{figure}
+
+\begin{block}
+
+\end{block}
+
+(2) 验证实验预习中问题 3 中的 (2):
+
+将函数发生器的频率从 300Hz 逐渐增大至 8000Hz, 进行如下测试:
+\begin{enumerate}[label=\textcircled{\arabic*}]
+    \item 可调谐低通滤波器输出信号幅值增加至 0.2V 时, 函数发生器的频率值为\underline{\blank{  }};
+    \item 可调谐低通滤波器输出信号幅值与输入信号幅值一致时, 函数发生器的频率值为\underline{\blank{  }};
+    \item 利用目前设置的加法器增益作为系统差分方程的系数, 在 MATLAB 上对滤波器幅频响应特性及零极点图进行仿真;
+    \item 判断滤波器的类型为\underline{\blank{  }}.
+\end{enumerate}
+\begin{block}
+
+\end{block}
+
+\begin{figure}[H]
+
+\end{figure}
+
+\begin{block}
+
+\end{block}
+
+(3) 验证实验预习中问题 3 中的 (3):
+
+将函数发生器的频率从 300Hz 逐渐增大至 8000Hz, 进行如下测试:
+\begin{enumerate}[label=\textcircled{\arabic*}]
+    \item 可调谐低通滤波器输出信号幅度增加至 0.2V 时, 函数发生器的频率值为\underline{\blank{  }};
+    \item 可调谐低通滤波器输出信号幅值增加至最大时的幅度值为\underline{\blank{  }}, 及函数发生器的频率值为\underline{\blank{  }};
+    \item 可调谐低通滤波器输出信号幅值衰减至 0.2V 时, 函数发生器的频率值为\underline{\blank{  }};
+    \item 利用目前设置的加法器增益作为系统差分方程的系数, 在 MATLAB 上对滤波器幅频响应特性及零极点图进行仿真;
+    \item 判断滤波器的类型为\underline{\blank{  }}.
+\end{enumerate}
+\begin{block}
+
+\end{block}
+
+\begin{figure}[H]
+
+\end{figure}
+
+\begin{block}
+
+\end{block}
+
+\textbf{4.5.4 设计 IIR 滤波器消除干扰谐波分量}
+
+分别设计低通, 高通和带通三种滤波器, 并进行滤波测试. 在 300Hz-8000Hz 频率范围内, 自行选定双频输入信号 $f_1$ 和 $f_2$, 其中一个频率在滤波器通带范围内, 另一个频率在阻带范围内.
+
+对于所设计的\textbf{低通, 高通和带通}滤波器, 分别进行滤波测试, 记录如下数据:
+\begin{enumerate}[label=\textcircled{\arabic*}]
+    \item 滤波器系统函数的系数;
+    \item 加法器的输出端和可调谐低通滤波器输出端的\textbf{频域波形};
+    \item 利用 MATLAB 仿真画出幅频响应曲线及零极点图.
+\end{enumerate}
+
+\noindent\textbf{低通滤波器:}
+
+\begin{block}
+
+\end{block}
+
+\begin{figure}[H]
+
+\end{figure}
+
+\begin{block}
+
+\end{block}
+
+\noindent\textbf{高通滤波器:}
+
+\begin{block}
+
+\end{block}
+
+\begin{figure}[H]
+
+\end{figure}
+
+\begin{block}
+
+\end{block}
+
+\noindent\textbf{带通滤波器:}
+
+\begin{block}
+
+\end{block}
+
+\begin{figure}[H]
+
+\end{figure}
+
+\begin{block}
+
+\end{block}
+
+\section{实验体会与建议}
+\begin{block}
+
+\end{block}
+
+\end{document}
