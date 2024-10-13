@@ -152,7 +152,11 @@ $f_c$ 设置为最高时, 通带截止频率为: \underline{\blank{ 14.0kHz }}, 
 \textbf{分析 1:} 其它参数保持不变, 矩形脉冲占空比设置为 25\%, 观察频谱波形是否受到采样信号脉冲占空比的影响, 用采样信号的频谱解析式进行分析.
 
 \begin{block}
-
+    若设方波信号的频率为 $f_1$, 正弦信号的频率为 $f_2$, 则采样信号的频谱解析式为
+    \begin{equation*}
+        \mathcal{F}(\omega)=\sum_{n=-\infty}^{+\infty}\frac{2\pi}{|n|}[\delta(\omega-2\pi nf_1+2\pi nf_2)+\delta(\omega-2\pi nf_1-2\pi nf_2)].
+    \end{equation*}
+    这与脉冲占空比无关.
 \end{block}
 
 \textbf{记录 7:} 记录两种占空比下, {\color{red} 采样信号}的时域波形图和频域波形图 (\textbf{可截图}).
