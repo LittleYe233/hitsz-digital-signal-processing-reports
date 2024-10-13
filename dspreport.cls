@@ -177,4 +177,4 @@
 
 % Inline text/Text block in some fonts
 \newcommand{\blank}[1]{{\lxgw\quad{#1}\quad}}
-\newenvironment{block}{\begingroup\lxgw}{\endgroup}
+\newenvironment{block}{\begingroup\lxgw\color{blue}}{\endgroup}
