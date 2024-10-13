@@ -4,10 +4,10 @@
 %% User settings
 %%
 
-\classno{\blank{  }}
-\stuno{\blank{  }}
-\groupno{\blank{  }}
-\stuname{\blank{  }}
+\classno{\blank{ 通信 6 班 }}
+\stuno{\blank{ 210210631 }}
+\groupno{\blank{ K405-34 }}
+\stuname{\blank{ 叶之凡 }}
 \expdate{\lxgw\expdatefmt\today}
 \expidx{一}
 \expname{采样与混叠}
@@ -32,9 +32,10 @@
 
 \begin{figure}[H]
     \centering
+    \includegraphics[width=.7\textwidth]{./scripts/report-1/1.5.2.1.png}
 \end{figure}
 
-$f_c$ 设置为最低时, 通带截止频率为: \underline{\blank{  }}, 阻带截止频率为: \underline{\blank{  }}.
+$f_c$ 设置为最低时, 通带截止频率为: \underline{\blank{ 249Hz }}, 阻带截止频率为: \underline{\blank{ 268Hz }}.
 
 \textbf{作图:} $f_c$ 设置为最高的低通滤波器频率响应曲线.
 
@@ -44,13 +45,14 @@ $f_c$ 设置为最低时, 通带截止频率为: \underline{\blank{  }}, 阻带�
 
 \begin{figure}[H]
     \centering
+    \includegraphics[width=.7\textwidth]{./scripts/report-1/1.5.2.2.png}
 \end{figure}
 
 \begin{block}
 
 \end{block}
 
-$f_c$ 设置为最高时, 通带截止频率为: \underline{\blank{  }}, 阻带截止频率为: \underline{\blank{  }}.
+$f_c$ 设置为最高时, 通带截止频率为: \underline{\blank{ 14.0kHz }}, 阻带截止频率为: \underline{\blank{ 15.2kHz }}.
 
 \textbf{1.5.3 基于采样保持器的信号采样和信号恢复}
 
@@ -61,9 +63,10 @@ $f_c$ 设置为最高时, 通带截止频率为: \underline{\blank{  }}, 阻带�
 
 \end{block}
 
-\begin{figure}[H]
-    \centering
-\end{figure}
+\begin{center}
+    \includegraphics[width=.7\textwidth]{./scripts/report-1/1.5.3.time_domain.png}
+    \includegraphics[width=.7\textwidth]{./scripts/report-1/1.5.3.spectrum.png}
+\end{center}
 
 \begin{block}
 
@@ -71,7 +74,11 @@ $f_c$ 设置为最高时, 通带截止频率为: \underline{\blank{  }}, 阻带�
 
 \textbf{记录 3:} 可调谐低通滤波器的截止频率由最大逐渐调至最小, 近似完全恢复原始信号 (即周期延拓谱近似完全滤除) 的情况下, 测试此时可调谐低通滤波器的幅频响应, \textbf{说明}此时低通滤波器的通带截止频率 (\textbf{不需要作图}).
 
-低通滤波器的通带截止频率为\underline{\blank{  }}.
+低通滤波器的通带截止频率为\underline{\blank{ 760Hz }}.
+
+\begin{block}
+    注: 此时其他频率分量已降至 -45dB 以下.
+\end{block}
 
 \textbf{1.5.4 基于乘法器的信号采样、信号恢复以及频谱混叠}
 
@@ -81,9 +88,12 @@ $f_c$ 设置为最高时, 通带截止频率为: \underline{\blank{  }}, 阻带�
 
 \end{block}
 
-\begin{figure}[H]
-    \centering
-\end{figure}
+\begin{center}
+    \includegraphics[width=.7\textwidth]{./scripts/report-1/1.5.4.sampled.time_domain.png}
+    \includegraphics[width=.7\textwidth]{./scripts/report-1/1.5.4.sampling.time_domain.png}
+    \includegraphics[width=.7\textwidth]{./scripts/report-1/1.5.4.sampled.spectrum.png}
+    \includegraphics[width=.7\textwidth]{./scripts/report-1/1.5.4.sampling.spectrum.png}
+\end{center}
 
 \begin{block}
 
@@ -92,20 +102,23 @@ $f_c$ 设置为最高时, 通带截止频率为: \underline{\blank{  }}, 阻带�
 \textbf{问题 1:} 谱线组和谱线组之间的距离 (红线部分) 与什么参数有关? 请解释说明.
 
 \begin{block}
-
+    方波的频率. 以方波信号采样时, 被采样信号的频谱会被等间隔搬移到采样信号的频谱上, 而谱线组之间的距离即表示方波信号的频率.
 \end{block}
 
 \textbf{记录 5:} 找到影响谱线组之间距离的参数, 并将其改为原值的两倍, 记录两种参数下, 采样信号的时域波形图和频域波形图 (\textbf{可截图}).
 
-影响谱线组之间距离的参数为: \underline{\blank{  }}.
+影响谱线组之间距离的参数为: \underline{\blank{ 方波的频率 }}.
 
 \begin{block}
 
 \end{block}
 
-\begin{figure}[H]
-    \centering
-\end{figure}
+\begin{center}
+    \includegraphics[width=.7\textwidth]{./scripts/report-1/note5.1kHz.time_domain.PNG}
+    \includegraphics[width=.7\textwidth]{./scripts/report-1/note5.1kHz.spectrum.PNG}
+    \includegraphics[width=.7\textwidth]{./scripts/report-1/note5.2kHz.time_domain.PNG}
+    \includegraphics[width=.7\textwidth]{./scripts/report-1/note5.2kHz.spectrum.PNG}
+\end{center}
 
 \begin{block}
 
@@ -114,20 +127,23 @@ $f_c$ 设置为最高时, 通带截止频率为: \underline{\blank{  }}, 阻带�
 \textbf{问题 2:} 每一谱线组内为什么有两根谱线, 两根谱线之间的距离和什么参数有关? 请解释说明.
 
 \begin{block}
-
+    被采样信号 (正弦信号) 的频率. 由问题 1, 两根谱线即为正弦信号的谱线, 其距离受正弦信号的频率影响.
 \end{block}
 
 \textbf{记录 6:} 找到影响组内谱线间隔的参数, 并将其改为原值的两倍, 记录两种参数下, 采样信号的时域波形图和频域波形图 (\textbf{可截图}).
 
-影响组内谱线间隔的参数为: \underline{\blank{  }}.
+影响组内谱线间隔的参数为: \underline{\blank{ 被采样信号的频率 }}.
 
 \begin{block}
 
 \end{block}
 
-\begin{figure}[H]
-    \centering
-\end{figure}
+\begin{center}
+    \includegraphics[width=.7\textwidth]{./scripts/report-1/note5.1kHz.time_domain.PNG}
+    \includegraphics[width=.7\textwidth]{./scripts/report-1/note5.1kHz.spectrum.PNG}
+    \includegraphics[width=.7\textwidth]{./scripts/report-1/note5.200Hz.time_domain.PNG}
+    \includegraphics[width=.7\textwidth]{./scripts/report-1/note5.200Hz.spectrum.PNG}
+\end{center}
 
 \begin{block}
 
@@ -145,9 +161,12 @@ $f_c$ 设置为最高时, 通带截止频率为: \underline{\blank{  }}, 阻带�
 
 \end{block}
 
-\begin{figure}[H]
-    \centering
-\end{figure}
+\begin{center}
+    \includegraphics[width=.7\textwidth]{./scripts/report-1/note5.1kHz.time_domain.PNG}
+    \includegraphics[width=.7\textwidth]{./scripts/report-1/note5.1kHz.spectrum.PNG}
+    \includegraphics[width=.7\textwidth]{./scripts/report-1/note5.duty25.time_domain.PNG}
+    \includegraphics[width=.7\textwidth]{./scripts/report-1/note5.duty25.spectrum.PNG}
+\end{center}
 
 \begin{block}
 
@@ -156,43 +175,43 @@ $f_c$ 设置为最高时, 通带截止频率为: \underline{\blank{  }}, 阻带�
 \textbf{分析 2:} 对采样信号进行滤波, 用频谱分析与进行观测. 选择合适的 Frequency Span, 将低通滤波器截止频率由最大值逐渐降低, 观测在滤波器截止频率下降过程中, 在频域窗口内波形发生什么变化.
 
 \begin{block}
-
+    随着低通滤波器的截止频率逐渐降低, 采样信号频域波形从高频率逐渐被截止, 直至全频段的增益都降到极低值.
 \end{block}
 
 \textbf{问题 3:} 当滤波器频率调谐旋钮旋转至最低截止频率位置时, 按照信号恢复理论, 应该能够恢复原有信号, 用示波器观察应该看到原始信号波形, 你看到原始信号波形了么?
 
 \begin{block}
-
+    没有.
 \end{block}
 
 \textbf{问题 4:} 如果不存在原始信号的频谱, 分析其原因.
 
 \begin{block}
-
+    本实验中的正弦信号的频谱在 100Hz 处有较大的增益. 该信号经由 1000Hz 方波信号采样后, 其频谱被分别搬移到采样信号的频谱在 1000Hz 整数倍处 (但不包括零), 因此使用最低截止频率 (约 200Hz) 的低通滤波器滤波后无法得到原始信号的频谱.
 \end{block}
 
 \textbf{分析 3:} 观察各个成组谱线对应的频率, 确定乘法器输出波形是偶对称信号波形还是奇对称信号波形.
 
 \begin{block}
-
+    观察得到成组谱线的中心频率分别为 1000Hz, 3000Hz, 5000Hz... 故乘法器输出波形是奇对称信号波形.
 \end{block}
 
 \textbf{问题 5:} 如何使得输出的采样信号中包含原始信号频率成份?
 
 \begin{block}
-
+    对方波信号增加直流偏置 (例如 1V); 设置很小的方波占空比 (模拟冲激响应).
 \end{block}
 
 \textbf{分析 4:} 如果将采样率设置为 200Hz, 刚好等于临界奈奎斯特采样频率, 将滤波器截止频率设置为最低, 观测时域波形和频谱波形的变化过程, 判断是否可以完全恢复原始信号, 对观察的现象进行解释.
 
 \begin{block}
-
+    可以. 对于频率为 100Hz 的正弦信号, 其会被 200Hz 的方波信号搬移到 200Hz 附近. 这会在 100Hz 处产生一个原始正弦信号的频谱, 且在 LPF 截止频率内仅存在这一个频谱, 因此可以完全恢复原始信号.
 \end{block}
 
 \textbf{分析 5:} 如果采样率设置为 150Hz, 将滤波器截止频率由最大逐渐降低, 观测时域波形和频谱波形的变化过程.
 
 \begin{block}
-
+    随着滤波器截止频率逐渐降低, 频谱波形的高频分量被逐渐削去, 最终会保留 50Hz 和 250Hz 的频率分量 (这是中心频率 300Hz 的一组谱线的左半边), 无法恢复原始信号.
 \end{block}
 
 \textbf{(选做) 问题 6: 将低通滤波器的截止频率由最大逐渐降低, 当频谱分析仪上剩 7 根谱线时,} 计算并解释这 7 根谱线的产生分别是延拓频谱里哪些频率成份产生的?
