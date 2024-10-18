@@ -1,0 +1,147 @@
+\documentclass{dspreport}
+
+%%
+%% User settings
+%%
+
+\classno{\blank{  }}
+\stuno{\blank{  }}
+\groupno{\blank{  }}
+\stuname{\blank{  }}
+\expdate{\lxgw\expdatefmt\today}
+\expidx{五}
+\expname{离散时间滤波器的应用}
+
+%%
+%% Document body
+%%
+
+\begin{document}
+% First page
+% Some titles and personal information are defined in ``\maketitle''.
+\maketitle
+
+\section{实验记录与问题思考}
+\noindent\textbf{5.5.2 设计直接形式 2 IIR 带通滤波器}
+
+\noindent(1) 滤波器的设计指标
+
+采用巴特沃斯滤波器设计带通滤波器, 阶数 N=1. 滤波器的设计指标: 中心频率为 395Hz, 3dB 带宽为 130Hz, 采样频率为 10kHz. 写出此时系统函数的系数.
+
+\begin{block}
+
+\end{block}
+
+\noindent(3) 内部节点饱和现象观测
+函数发生器产生幅度 0.1-1.6V 之间的三组正弦波信号, 施加到滤波器输入端, 记录在图 5-3 中节点 $x_2$ 或 $x_1$ \textbf{任意一个出现饱和}现象时, 该节点出现饱和现象的\textbf{时域波形}及此时 Y 输出端口的\textbf{时域波形} (每组输入正弦波信号只需记录一个节点, 注意说明输入信号幅值, 节点名称).
+
+\begin{block}
+
+\end{block}
+
+\begin{figure}[H]
+
+\end{figure}
+
+\begin{block}
+
+\end{block}
+
+\noindent\textbf{问题 1} 给出确保不发生饱和现象的条件下所使用的输入信号的最大幅值.
+
+\begin{block}
+
+\end{block}
+
+\noindent\textbf{问题 2} 写出输出节点 Y, 内部节点 $x_2$ 和 $x_1$ 的系统函数 (以 U 为输入节点).
+
+\begin{block}
+
+\end{block}
+
+\noindent(4) 调整系统函数参数以满足设计指标
+
+函数发生器产生幅值为 0.08V (即 0.16Vpp) 的正弦输入信号, 测量输出端口 Y 的幅频响应曲线. 由于理论计算和硬件实现存在着误差, 需微调系统函数的参数, 使其满足滤波器设计指标, 确定最后选定的滤波器系数 \textbf{(实测中心频率与理论计算中心频率基本一致)}.
+
+\begin{block}
+
+\end{block}
+
+\begin{figure}[H]
+
+\end{figure}
+
+\begin{block}
+
+\end{block}
+
+此时滤波器系数为:
+
+$a_0$=\underline{\blank{  }}; $a_1$=\underline{\blank{  }}; $a_2$=\underline{\blank{  }}.
+
+$b_0$=\underline{\blank{  }}; $b_1$=\underline{\blank{  }}; $b_2$=\underline{\blank{  }}.
+
+在微调系统参数后, 测量输出节点 Y 通过可调谐低通滤波器 (TUNEABLE LPF) 后的幅频响应, 在实验报告里根据实测数据用 MATLAB 画出幅频响应曲线, 并与仿真曲线在同一张图中对比.
+
+\begin{block}
+
+\end{block}
+
+\begin{figure}[H]
+
+\end{figure}
+
+\begin{block}
+
+\end{block}
+
+\noindent\textbf{问题 3} 滤波器系统函数系数 $b_0$, $b_1$, $b_2$ 具有怎样的关系, 解释其原因.
+
+\begin{block}
+
+\end{block}
+
+\noindent\textbf{5.5.3 提高采样频率, 保持滤波器幅频特性不变}
+
+\noindent(1) 采样频率提高至 20kHz, 设计与 5.5.2 (1) 技术指标一样的带通滤波器, 重新设置实验板系数.
+
+参数为: $a_0$=\underline{\blank{  }}; $a_1$=\underline{\blank{  }}; $a_2$=\underline{\blank{  }}.
+
+\phantom{参数为:} $b_0$=\underline{\blank{  }}; $b_1$=\underline{\blank{  }}; $b_2$=\underline{\blank{  }}.
+
+\noindent(2) 测试 20kHz 采样频率下滤波器输出节点 Y 的幅频响应特性. 如果实测幅频响应不满足要求, 则需微调滤波器系数, 若微调, 写出微调后的滤波器系数.
+
+\begin{block}
+
+\end{block}
+
+\noindent\textbf{问题 4} 函数发生器产生幅值与问题 1 中相同的正弦信号, 测试 20kHz 采样频率下滤波器各节点是否发生饱和.
+
+\begin{block}
+
+\end{block}
+
+\noindent\textbf{给出确保不发生饱和现象的条件下所使用的输入信号的最大幅值.}
+
+\begin{block}
+
+\end{block}
+
+\noindent\textbf{问题 5} \textbf{若不改变滤波器的参数设置}, 20kHz 采样频率下输出节点 Y 的幅频响应曲线的峰值幅度与 10kHz 采样频率下的峰值幅度相比, 有怎样的变化? 其中心频率是否发生变化?
+
+\begin{block}
+
+\end{block}
+
+\noindent\textbf{问题 6} 如果要在两种采样频率条件下滤波器的幅频响应不变, 20kHz 采样频率下的极点相位与 10kHz 采样频率下的极点相位具有什么样的关系?
+
+\begin{block}
+
+\end{block}
+
+\section{实验体会与建议}
+\begin{block}
+
+\end{block}
+
+\end{document}
