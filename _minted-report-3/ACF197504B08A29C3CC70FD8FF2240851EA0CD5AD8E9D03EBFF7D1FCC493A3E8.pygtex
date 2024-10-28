@@ -1,0 +1,25 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c}{\PYGZpc{} Simulation}
+\PYG{n}{b}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1.3}\PYG{+w}{ }\PYG{l+m+mf}{0.902}\PYG{p}{];}
+\PYG{n}{a}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{];}
+\PYG{n}{fs}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m+mi}{10000}\PYG{p}{;}
+\PYG{n}{f}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n+nb}{linspace}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{fs}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{fs}\PYG{p}{);}
+
+\PYG{p}{[}\PYG{n}{h}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{w}\PYG{p}{]}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{freqz}\PYG{p}{(}\PYG{n}{b}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{a}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{fs}\PYG{p}{);}
+\PYG{n}{h}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n+nb}{abs}\PYG{p}{(}\PYG{n}{h}\PYG{p}{);}
+
+\PYG{c}{\PYGZpc{} Reality}
+\PYG{n}{ff}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{p}{[}\PYG{l+m+mi}{300}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{500}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{700}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{900}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{1100}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{1300}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{1725}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{2150}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{2575}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{3000}\PYG{p}{];}
+\PYG{n}{hh}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{p}{[}\PYG{l+m+mf}{1.15}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{1.05}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.86}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.65}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.37}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.17}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.79}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{1.71}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{2.73}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{3.71}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{p}{;}\PYG{+w}{  }\PYG{c}{\PYGZpc{} The compared voltage is 2V}
+
+\PYG{n+nb}{grid}\PYG{+w}{ }\PYG{n}{on}\PYG{p}{;}
+\PYG{n}{hold}\PYG{+w}{ }\PYG{l+s}{on}\PYG{p}{;}
+\PYG{n+nb}{plot}\PYG{p}{(}\PYG{n}{f}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{h}\PYG{p}{);}
+\PYG{n+nb}{plot}\PYG{p}{(}\PYG{n}{ff}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{hh}\PYG{p}{);}
+\PYG{n+nb}{scatter}\PYG{p}{(}\PYG{n}{ff}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{hh}\PYG{p}{);}
+\PYG{n+nb}{legend}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}Simulation\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}Reality\PYGZsq{}}\PYG{p}{);}
+\PYG{n+nb}{xlabel}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}Frequency (Hz)\PYGZsq{}}\PYG{p}{);}
+\PYG{n+nb}{ylabel}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}Amplitude Response\PYGZsq{}}\PYG{p}{);}
+\PYG{n+nb}{title}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}Simulated and Real Amplitude Response from Notch Filter\PYGZsq{}}\PYG{p}{);}
+\PYG{n}{hold}\PYG{+w}{ }\PYG{l+s}{off}\PYG{p}{;}
+\end{Verbatim}
