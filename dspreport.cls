@@ -25,7 +25,7 @@
 \RequirePackage{indentfirst}
 % See: https://tex.stackexchange.com/a/176780
 \RequirePackage{makecell}
-% \RequirePackage[newfloat]{minted}
+\RequirePackage[newfloat]{minted}
 % See: https://www.overleaf.com/learn/latex/Multiple_columns
 \RequirePackage{multicol}
 \RequirePackage{multirow}
@@ -115,15 +115,15 @@
 \definecolor{copper}    {HTML}{BD642B}
 \definecolor{lavender}  {HTML}{BA7DA3}
 
-% \setminted{linenos, breaklines, frame=lines}
-% \SetupFloatingEnvironment{listing}{name={程序清单}}
+\setminted{linenos, breaklines, frame=lines}
+\SetupFloatingEnvironment{listing}{name={程序清单}}
 
-% \setmonofont{LigalexMono}[
-%     Path=fonts/,
-%     Extension=.ttf,
-%     ItalicFont=LigalexMono-Italic,
-%     BoldFont=LigalexMono-Bold
-% ]
+\setmonofont{LigalexMono}[
+    Path=fonts/,
+    Extension=.ttf,
+    ItalicFont=LigalexMono-Italic,
+    BoldFont=LigalexMono-Bold
+]
 
 \setlist{nosep}
 
