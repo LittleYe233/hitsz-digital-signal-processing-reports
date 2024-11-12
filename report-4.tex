@@ -4,10 +4,10 @@
 %% User settings
 %%
 
-\classno{\blank{  }}
-\stuno{\blank{  }}
+\classno{\lxgw\quad{ 通信 6 班 }\quad}
+\stuno{\lxgw\quad{ 210210631 }\quad}
 \groupno{\blank{  }}
-\stuname{\blank{  }}
+\stuname{\lxgw\quad{ 叶之凡 }\quad}
 \expdate{\lxgw\expdatefmt\today}
 \expidx{四}
 \expname{无限脉冲响应滤波器}
@@ -25,13 +25,19 @@
 \textbf{问题 1}\quad 图 4-1 中, 以 $x(n)$ 为系统输入, $x_0(n)$ 为系统输出, 写出系统的差分方程与系统函数 $H(z)$.
 
 \begin{block}
-
+\begin{gather*}
+    x_0(n)=x(n)-a_1x_0(n-1)-a_2x_0(n-2). \\
+    H(z)=\frac{x_0(n)}{x(n)}=\frac{1}{1+a_1z^{-1}+a_2z^{-2}}.
+\end{gather*}
 \end{block}
 
-\textbf{问题 2}\quad 图 4-2 中, 以 $x(n)$ 为系统输入, $x_0(n)$ 为系统输出, 写出系统的差分方程与系统函数 $H(z)$.
+\textbf{问题 2}\quad 图 4-2 中, 以 $x(n)$ 为系统输入, $y(n)$ 为系统输出, 写出系统的差分方程与系统函数 $H(z)$.
 
 \begin{block}
-
+\begin{gather*}
+    y(n)=x(n)+b_0x_0(n)+b_1x_0(n-1)+b_2x_0(n-2)-a_1y(n-1)-a_2y(n-2). \\
+    H(z)=\frac{b_0+b_1z^{-1}+b_2z^{-2}}{1+a_1z^{-1}+a_2z^{-2}}.
+\end{gather*}
 \end{block}
 
 \textbf{问题 3}\quad 利用图形化的零极点方法来估计下列三种情形中的幅频响应 (0 到 $2\pi$), 判断滤波器类型 (低通, 高通, 带通).
@@ -41,12 +47,20 @@
     \item $b_0=0.06, b_1=0, b_2=-0.06; a_0=1, a_1=-1.29, a_2=0.88$.
 \end{enumerate}
 
+\begin{block}
+    \begin{enumerate}[(1)]
+        \item 低通滤波器.
+        \item 高通滤波器.
+        \item 带通滤波器.
+    \end{enumerate}
+\end{block}
+
 \section{实验记录与问题思考}
 \noindent\textbf{4.5.2 无前馈的 IIR: 二阶滤波器}
 
 (3) 测试系统幅频响应.
 
-测试系统的谐振频率为\underline{\blank{  }}, 谐振频率下的幅值放大倍数为\underline{\blank{  }}, 通频带带宽 (3dB 带宽) 为\underline{\blank{  }}.
+测试系统的谐振频率为\underline{\blank{ 1780Hz }}, 谐振频率下的幅值放大倍数为\underline{\blank{ 14.58 }}, 通频带带宽 (3dB 带宽) 为\underline{\blank{ 2.89kHz }}.
 
 此时加法器的增益作为系统差分方程的系数, 利用 MATLAB 仿真, 在同一张图 300Hz-400Hz 频率范围内画出该滤波器\textbf{实际测试}和\textbf{仿真计算}的幅频响应特性曲线.
 
@@ -55,14 +69,15 @@
 \end{block}
 
 \begin{figure}[H]
-
+    \centering
+    \includegraphics[width=.8\textwidth]{scripts/report-4/exp4_4_5_2_3.png}
 \end{figure}
 
 \begin{block}
 
 \end{block}
 
-仿真的谐振频率为\underline{\blank{  }}, 在谐振频率下的幅值放大倍数为\underline{\blank{  }}, 通频带带宽 (3dB 带宽) 为\underline{\blank{  }}.
+仿真的谐振频率为\underline{\blank{ 1800Hz }}, 在谐振频率下的幅值放大倍数为\underline{\blank{ 19.00 }}, 通频带带宽 (3dB 带宽) 为\underline{\blank{ 2.9kHz }}.
 
 并将仿真结果和实际测试值进行对比.
 
@@ -75,36 +90,46 @@
 (4) 将参数重新设定为步骤 (1) 的参数. 增大 $|a_1|$ 的值至 1.7, 观察 $|a_1|$ 值的增大对谐振频率和放大倍数的影响, 并以此来估计极点位置产生了怎样的变化 (从极点与单位圆, 实轴, 虚轴的举例分析).
 
 \begin{block}
-
+谐振频率为 1472Hz, 放大倍数约为 23. 极点位置更靠近 $(1,0)$ (角度从 32.612 deg 变为 26.493 deg).
 \end{block}
 
 (5) 将参数重新设定为步骤 (1) 的参数. 增大 $|a_2|$ 的值至 0.95, 观察 $|a_2|$ 值的增大对谐振频率和放大倍数的影响, 并以此来估计极点位置产生了怎样的变化 (从极点与单位圆, 实轴, 虚轴的举例分析).
 
 \begin{block}
-
+谐振频率为 1935Hz, 放大倍数约为 35. 极点位置更靠近 $(0,1)$ (角度从 32.612 deg 变为 34.836 deg).
 \end{block}
 
 \textbf{问题 5} 比较分别改变 $a_1$ 和 $a_2$ 对极点位置, 谐振频率以及带宽的影响. 在 $a_1, a_2$ 中你将选择调整哪一个参数来调整系统的谐振频率? 解释一下原因.
 
 \begin{block}
-
+$a_1$. 因为 $a_1$ 的调整使极点不会更靠近单位圆, 保证系统的稳定.
 \end{block}
 
-(6) 出现振荡时的 $a_2$ 值为\underline{\blank{  }}.
+(6) 出现振荡时的 $a_2$ 值为\underline{\blank{ -1.1 (-1 时极点在单位圆上) }}.
 
 \textbf{去掉输入信号}, 观察输出结果, 并\textbf{截图保存}.
 
-输出结果是正弦曲线吗? 曲线的频率为\underline{\blank{  }}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\textwidth]{scripts/report-4/4.5.2.6.png}
+\end{figure}
+
+输出结果是正弦曲线吗? 曲线的频率为\underline{\blank{ 2400Hz }}.
 
 \begin{block}
-
+不是, 是经过采样后的正弦曲线.
 \end{block}
 
 根据当前加法器的增益计算并画出极点的位置, 特别注意他它们是在单位圆的内部还是外部?
 
 \begin{block}
-
+极点位置为 $(0.80\pm0.68j)$. 在单位圆外部.
 \end{block}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\textwidth]{scripts/report-4/exp4_4_5_2_6.png}
+\end{figure}
 
 (7) {\color{red} (选做)} 逐渐减小 $a_2$ (即增加 $|a_2|$), 观察时域及频域波形的变化, 并描述改变 $a_2$ 的值对系统响应结果的影响.
 
@@ -147,26 +172,31 @@
 \textbf{问题 6} 图 4-5 中以 $x(n)$ 为系统的输入, $y(n)$ 为系统输出, 写出滤波器的系统函数 $H(z)$, 并与问题 2 中图 4-2 的系统函数对比.
 
 \begin{block}
-
+    \begin{gather*}
+        y(n)=x(n)+b_0x_0(n)+b_1x_0(n-1)+b_2x_0(n-2)-a_1y(n-1)-a_2y(n-2). \\
+        H(z)=\frac{b_0+b_1z^{-1}+b_2z^{-2}}{1+a_1z^{-1}+a_2z^{-2}}.
+    \end{gather*}
 \end{block}
 
 (1) 验证实验预习中问题 3 中的 (1):
 
 将函数发生器的频率从 300Hz 逐渐增大至 8000Hz, 进行如下测试:
 \begin{enumerate}[label=\textcircled{\arabic*}]
-    \item 函数发生器频率为 300Hz 时, 可调谐低通滤波器输出信号的幅度值为\underline{\blank{  }};
-    \item 可调谐低通滤波器输出信号幅值为 0.5V 时, 函数发生器的频率值为\underline{\blank{  }};
-    \item 可调谐低通滤波器输出信号基本消失时, 函数发生器的频率值为\underline{\blank{  }};
+    \item 函数发生器频率为 300Hz 时, 可调谐低通滤波器输出信号的幅度值为\underline{\blank{ 2.20V }};
+    \item 可调谐低通滤波器输出信号幅值为 0.5V 时, 函数发生器的频率值为\underline{\blank{ 1.9kHz }};
+    \item 可调谐低通滤波器输出信号基本消失时, 函数发生器的频率值为\underline{\blank{ 5kHz }};
     \item 利用目前设置的加法器增益作为系统差分方程的系数, 在 MATLAB 上对滤波器幅频响应特性及零极点图进行仿真;
-    \item 判断滤波器的类型为\underline{\blank{  }}.
+    \item 判断滤波器的类型为\underline{\blank{ 低通 }}.
 \end{enumerate}
+
 \begin{block}
 
 \end{block}
 
-\begin{figure}[H]
-
-\end{figure}
+\begin{center}
+    \includegraphics[width=.8\textwidth]{scripts/report-4/exp4_4_6_3_1_amp.png}
+    \includegraphics[width=.8\textwidth]{scripts/report-4/exp4_4_6_3_1_zplane.png}
+\end{center}
 
 \begin{block}
 
@@ -176,18 +206,20 @@
 
 将函数发生器的频率从 300Hz 逐渐增大至 8000Hz, 进行如下测试:
 \begin{enumerate}[label=\textcircled{\arabic*}]
-    \item 可调谐低通滤波器输出信号幅值增加至 0.2V 时, 函数发生器的频率值为\underline{\blank{  }};
-    \item 可调谐低通滤波器输出信号幅值与输入信号幅值一致时, 函数发生器的频率值为\underline{\blank{  }};
+    \item 可调谐低通滤波器输出信号幅值增加至 0.2V 时, 函数发生器的频率值为\underline{\blank{ 1.4kHz }};
+    \item 可调谐低通滤波器输出信号幅值与输入信号幅值一致时, 函数发生器的频率值为\underline{\blank{ 3.1kHz }};
     \item 利用目前设置的加法器增益作为系统差分方程的系数, 在 MATLAB 上对滤波器幅频响应特性及零极点图进行仿真;
-    \item 判断滤波器的类型为\underline{\blank{  }}.
+    \item 判断滤波器的类型为\underline{\blank{ 高通 }}.
 \end{enumerate}
+
 \begin{block}
 
 \end{block}
 
-\begin{figure}[H]
-
-\end{figure}
+\begin{center}
+    \includegraphics[width=.8\textwidth]{scripts/report-4/exp4_4_6_3_2_amp.png}
+    \includegraphics[width=.8\textwidth]{scripts/report-4/exp4_4_6_3_2_zplane.png}
+\end{center}
 
 \begin{block}
 
@@ -197,19 +229,21 @@
 
 将函数发生器的频率从 300Hz 逐渐增大至 8000Hz, 进行如下测试:
 \begin{enumerate}[label=\textcircled{\arabic*}]
-    \item 可调谐低通滤波器输出信号幅度增加至 0.2V 时, 函数发生器的频率值为\underline{\blank{  }};
-    \item 可调谐低通滤波器输出信号幅值增加至最大时的幅度值为\underline{\blank{  }}, 及函数发生器的频率值为\underline{\blank{  }};
-    \item 可调谐低通滤波器输出信号幅值衰减至 0.2V 时, 函数发生器的频率值为\underline{\blank{  }};
+    \item 可调谐低通滤波器输出信号幅度增加至 0.2V 时, 函数发生器的频率值为\underline{\blank{ 1.1kHz }};
+    \item 可调谐低通滤波器输出信号幅值增加至最大时的幅度值为\underline{\blank{ 1V }}, 及函数发生器的频率值为\underline{\blank{ 2.6kHz }};
+    \item 可调谐低通滤波器输出信号幅值衰减至 0.2V 时, 函数发生器的频率值为\underline{\blank{ 5.0kHz }};
     \item 利用目前设置的加法器增益作为系统差分方程的系数, 在 MATLAB 上对滤波器幅频响应特性及零极点图进行仿真;
-    \item 判断滤波器的类型为\underline{\blank{  }}.
+    \item 判断滤波器的类型为\underline{\blank{ 带通 }}.
 \end{enumerate}
+
 \begin{block}
 
 \end{block}
 
-\begin{figure}[H]
-
-\end{figure}
+\begin{center}
+    \includegraphics[width=.8\textwidth]{scripts/report-4/exp4_4_6_3_3_amp.png}
+    \includegraphics[width=.8\textwidth]{scripts/report-4/exp4_4_6_3_3_zplane.png}
+\end{center}
 
 \begin{block}
 
@@ -229,12 +263,15 @@
 \noindent\textbf{低通滤波器:}
 
 \begin{block}
-
+    系数: $b_0=0.02, b_1=0.04, b_2=0.02; a_0=1, a_1=-1.562, a_2=0.68$.
 \end{block}
 
-\begin{figure}[H]
-
-\end{figure}
+\begin{center}
+    \includegraphics[width=.8\textwidth]{scripts/report-4/4.6.4.lowpass.time_domain.png}
+    \includegraphics[width=.8\textwidth]{scripts/report-4/4.6.4.lowpass.spectrum.png}
+    \includegraphics[width=.8\textwidth]{scripts/report-4/exp4_4_6_4_lowpass_amp.png}
+    \includegraphics[width=.8\textwidth]{scripts/report-4/exp4_4_6_4_lowpass_zplane.png}
+\end{center}
 
 \begin{block}
 
@@ -243,12 +280,15 @@
 \noindent\textbf{高通滤波器:}
 
 \begin{block}
-
+    系数: $b_0=0.504, b_1=-1.008, b_2=0.504; a_0=1, a_1=0, a_2=0.45$.
 \end{block}
 
-\begin{figure}[H]
-
-\end{figure}
+\begin{center}
+    \includegraphics[width=.8\textwidth]{scripts/report-4/4.6.4.highpass.time_domain.png}
+    \includegraphics[width=.8\textwidth]{scripts/report-4/4.6.4.highpass.spectrum.png}
+    \includegraphics[width=.8\textwidth]{scripts/report-4/exp4_4_6_4_highpass_amp.png}
+    \includegraphics[width=.8\textwidth]{scripts/report-4/exp4_4_6_4_highpass_zplane.png}
+\end{center}
 
 \begin{block}
 
@@ -257,12 +297,15 @@
 \noindent\textbf{带通滤波器:}
 
 \begin{block}
-
+    系数: $b_0=0.06, b_1=0, b_2=-0.06; a_0=1, a_1=-1.77, a_2=0.88$.
 \end{block}
 
-\begin{figure}[H]
-
-\end{figure}
+\begin{center}
+    \includegraphics[width=.8\textwidth]{scripts/report-4/4.6.4.bandpass.time_domain.png}
+    \includegraphics[width=.8\textwidth]{scripts/report-4/4.6.4.bandpass.spectrum.png}
+    \includegraphics[width=.8\textwidth]{scripts/report-4/exp4_4_6_4_bandpass_amp.png}
+    \includegraphics[width=.8\textwidth]{scripts/report-4/exp4_4_6_4_bandpass_zplane.png}
+\end{center}
 
 \begin{block}
 
